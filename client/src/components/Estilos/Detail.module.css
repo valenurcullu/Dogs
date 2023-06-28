@@ -1,0 +1,80 @@
+.background{ 
+    background-image: url('https://www.ecoticias.com/wp-content/uploads/2022/01/MZEQ_fotonoticia_20160404180800_644.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh
+}
+
+.btn{
+    width: 9rem;
+    margin: 1rem;
+    margin-top: 0.5em;
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: orange;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 13px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+    }
+    
+.btn:hover {
+    background-color: black;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+    }
+   
+
+
+.general{
+    margin-top: 5%;
+    display: flex;
+    border: 4px solid orange;
+    border-radius: 9px 27px 18px 11px;
+    border-image: 10%;
+    background: black;
+    
+}
+.h{
+    color:white;
+    background: orange;
+    border-radius: 5px;
+}
+
+.dogdetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 1%;
+    margin-top: 20px;
+    width: 500px;
+    height: 400px;
+    color: #252323 ;
+        
+        }
+    

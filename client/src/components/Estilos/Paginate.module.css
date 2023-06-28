@@ -1,0 +1,32 @@
+.back{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+ .list {
+    display: inline-flex;
+    padding: 0.3rem;
+    background-color: orange;
+    border-radius: 50px;
+}
+
+.list > button {
+   
+    background: rgb(50, 26, 22);
+    border-radius: 6px;
+    border: 1px solid orange;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-family: Arial;
+    font-size: 18px;
+    padding: 6px 10px;
+    
+    
+}
+
+/*linear-gradient(to bottom, rgb(31, 166, 184) 5%, rgb(40, 132, 186) 100%)*/

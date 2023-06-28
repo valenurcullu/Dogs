@@ -1,0 +1,87 @@
+.error{
+   background-color: red;
+}
+.background{ 
+    background-image: url('https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2017/07/nine-dogs-in-grassy-field.jpg');
+    background-size: cover;
+    align-items: center center;
+    justify-content:space-between;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+.titulo{
+    color: black;
+    display: FLEX;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bolder;
+}
+.label{
+    background: orange;
+    width: 315px;
+    border-radius: 10px;
+}
+
+.formStyle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.numInput{
+    padding: 5px;
+    font-size: 25px;
+    background-color: #f1eeee;
+    color: #000000;
+    border-radius: 9px;
+}
+
+
+.btn{
+    width: 9rem;
+    margin: 1rem;
+    margin-top: 0.5em;
+    
+    background-color: orange;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.5;
+    
+    padding: 13px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    
+    vertical-align: top;
+    white-space: nowrap;
+    }
+    
+.btn:hover {
+    background-color: black;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+    }
