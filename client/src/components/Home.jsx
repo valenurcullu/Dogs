@@ -77,7 +77,7 @@ export default function Home(){
         </div>
         <div className={style.headerContainerLeft}>
             <div>
-                <button className = {style.btn} onClick={e=>{handleClick(e)}}>Recargar Perros!</button>
+                <button className = {style.btn} onClick={e=>{handleClick(e)}}>Reload Dogs!</button>
                 <Link to='/create'>
                         <button className = {style.btn} >Create Dog</button>
                  </Link>
