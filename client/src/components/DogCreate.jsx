@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { postDog,getTemperaments } from "../actions";
 import { Link,useHistory } from "react-router-dom"
 import { useEffect,useState } from "react";
-import style from './Estilos/DogCreate.module.css'
+import style from './Estilos/DogCreate.module.css';
+import Nav from './Nav.jsx';
 
 function validate(input){
     let errors = {}
@@ -98,9 +99,10 @@ const [input,setInput]= useState({
 
     return(
         <div className={style.background}>
+            <Nav/>
             <div>
             <Link to='/home'>
-            <button className={style.btn}>Home</button>
+            <button className={style.btn}>Back</button>
             </Link>
             <h2 className={style.titulo}>CREATE YOUR DOGS</h2>
             </div>

@@ -13,9 +13,11 @@ export default function Paginate({ dogsPerPage, allDogs, paginado }) {
         <nav className= {style.back}>
             <ul className= {style.ul}>
                 {pageNumbers?.map((number) => {
-                    return(<li className= {style.list} key={number}>
-                         <button  onClick={() => paginado(number)}>{number}</button> 
-                    </li>)
+                    return(
+                    <li className= {style.list} key={number}>
+                         <button className= {style.btn}  onClick={() => paginado(number)}>{number}</button> 
+                    </li>
+                    )
                 })}
             </ul>
         </nav>

@@ -20,7 +20,7 @@ export default function SearchBar(){
     return(
         <div className={style.searchbar_container}>
             <form className={style.form}>
-                <input className={style.searchbar} type="text" placeholder="buscar..." onChange={e=>handleInput(e)} value={findDog}/>
+                <input className={style.searchbar} type="text" placeholder="Search..." onChange={e=>handleInput(e)} value={findDog}/>
                 <button className={style.searchbar_button} type="submit" onClick={e=>handleSubmit(e)}>Find</button>
             </form>
         </div>

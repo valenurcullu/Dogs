@@ -2,8 +2,9 @@
    background-color: red;
 }
 .background{ 
-    background-image: url('https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2017/07/nine-dogs-in-grassy-field.jpg');
-    background-size: cover;
+    /* background-image: url('https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2017/07/nine-dogs-in-grassy-field.jpg'); */
+    background-color: white;
+    /* background-size: cover; */
     align-items: center center;
     justify-content:space-between;
     width: 100%;
@@ -27,7 +28,7 @@
     font-weight: bolder;
 }
 .label{
-    background: orange;
+    background: rgb(143, 140, 140);
     width: 315px;
     border-radius: 10px;
 }
@@ -53,7 +54,7 @@
     margin: 1rem;
     margin-top: 0.5em;
     
-    background-color: orange;
+    background-color: red;
     border-radius: 8px;
     border-style: none;
     box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;

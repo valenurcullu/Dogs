@@ -1,11 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import style from './Estilos/Card.module.css'
+//import { Link } from "react-router-dom";
+//import style from './Estilos/Card.module.css'
+import './Estilos/Card.css';
 
 export default function Card({image,name,temperament,weight_min,weight_max,id}){
 return (
 
-<div className={style.div}>
+    <div className="card">
+            <div className="cardImg">
+                <img className='cardImage' src={image} alt="" />
+                <div className="principalContent">
+                    <h2 className="cardName">{name}</h2>
+                </div>
+            </div>
+            <div className="cardContent">
+                <div className="cardItems">
+                    <h3 className="cardInfo">weight min:{weight_min}kg/weight max:{weight_max}kg</h3>
+                    <h3 className="cardInfo">
+                        {temperament}...
+                    </h3>
+                </div>
+                
+            </div>
+        </div> 
+
+)
+}
+
+{/* <div className={style.div}>
         <div >
             <Link to={`/home/${id}`}>
             <img src={image?image:image='https://www.shutterstock.com/image-vector/little-white-cartoon-dog-sitting-260nw-220770199.jpg'} className={style.img} alt={`imagen de: ${name}`} height= '250px' width='200px'/>
@@ -20,10 +42,8 @@ return (
                  <h4 className={style.h} >weight min:{weight_min}kg/weight max:{weight_max}kg</h4>
             </div>
             
-        </div>
-    </div>
-
-
+            </div>
+        </div> */}
 
 
 
@@ -52,5 +72,3 @@ return (
     //         </div>
     //     </div>
     // </div>
-)
-}

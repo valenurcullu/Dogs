@@ -5,20 +5,22 @@
     align-items: center;
 }
 
-
+.btn{
+    background-color: rgb(174, 172, 172);
+}
 
  .list {
     display: inline-flex;
     padding: 0.3rem;
-    background-color: orange;
+    /* background-color: rgb(60, 60, 60); */
     border-radius: 50px;
 }
 
 .list > button {
    
-    background: rgb(50, 26, 22);
+    background: rgb(174, 172, 172);
     border-radius: 6px;
-    border: 1px solid orange;
+    border: 1px solid black;
     display: inline-block;
     cursor: pointer;
     color: white;

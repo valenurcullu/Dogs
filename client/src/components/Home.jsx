@@ -2,11 +2,16 @@ import React, { Fragment } from 'react'
 import { useState,useEffect } from 'react';
 import {useDispatch,useSelector} from 'react-redux'
 import { getDogs,getTemperaments,filterByTemperament,filterByCreated,filterByName,filterByWeight} from '../actions';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 import Card from './Card';
 import Paginate from './Paginate';
 import SearchBar from './SearchBar';
-import style from './Estilos/Home.module.css'
+//import style from './Estilos/Home.module.css'
+import './Estilos/Home.css'
+import Nav from './Nav';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+
+
 
 export default function Home(){
     const dispatch = useDispatch();
@@ -68,48 +73,39 @@ export default function Home(){
     }
 
  return (
-    <div className={style.background}>
-      <header>
-        <div className={style.arreglar}>
-            <Link to = '/'>
-                <button className={style.logo}>Dogpedia</button>
-            </Link>
-        </div>
-        <div className={style.headerContainerLeft}>
-            <div>
-                <button className = {style.btn} onClick={e=>{handleClick(e)}}>Reload Dogs!</button>
-                <Link to='/create'>
-                        <button className = {style.btn} >Create Dog</button>
-                 </Link>
-            </div>
-            
-         <div className={style.headerLeft}>
-             <SearchBar/>
-             <div className={style.containerFilters}>
-             <select onChange={e=> handleFilterByName(e)}>
-                <option selected="true" disabled="disabled">Order alphabetically</option>
-                <option value='all'>All</option>
-                <option value='asc'>Ascendente</option>
-                <option value='desc'>Descendente</option>
-             </select>
+    <div className="homeContainer">
+        <Nav/>
+     
+        <div className="filters">
+            <div className="selectBox">
+                <select onChange={e=> handleFilterByName(e)}>
+                     <option selected="true" disabled="disabled">Order alphabetically</option>
+                     <option value='all'>All</option>
+                     <option value='asc'>Ascendente</option>
+                     <option value='desc'>Descendente</option>
+                 </select>
+             </div>
 
-             
+             <div className="selectBox">
              <select onChange={e=>handleFilterByCreated(e)}>
                 <option selected="true" disabled="disabled">Order by created</option>
                 <option value='all'>All</option>
                 <option value='created'>Created</option>
                 <option value='api'>Api</option>
              </select>
+             </div>
 
-
+             <div className="selectBox">
              <select onChange={e=> handleFilterByWeight(e)}>
                 <option selected="true" disabled="disabled">Order by weight</option>
                 <option value='all'>All</option>
                 <option value="max_weight">Max</option>
                 <option value="min_weight">Min</option>
              </select>
+             </div>
 
 
+             <div className="selectBox">
              <select onChange={e=> handleFilterTempe(e)} >
                 <option selected="true" disabled="disabled">Order by Temperament</option>
                 <option value='all'>All</option>
@@ -119,20 +115,55 @@ export default function Home(){
                     )
                 })}
              </select>
+             </div>
+
+             <div className="searchContainer">
+                <SearchBar/>
+             </div>
+       
         </div>
-        </div>
-    </div>
-      </header>
+    
         <Paginate dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado}/>
-        <div>
-         {currentDogs?.map(el=>{
-            return(
-                <div className={style.main_container}>
-            <Card id={el.id} image={el.image} name={el.name} temperament={!el.createdInDb? el.temperament :el.temperaments.map(e=> e.name + (','))} weight_min={el.weight_min} weight_max={el.weight_max}/>
+        
+        <div className="cardsContainer">
+            <div className="cards">
+             {currentDogs?.map(el=>{
+                  return(
+                    <Link
+                    className="Link"
+                    to={`/home/${el.id}`}
+                    
+                >
+                    <Card id={el.id} image={el.image} name={el.name} temperament={!el.createdInDb? el.temperament :el.temperaments.map(e=> e.name + (','))} weight_min={el.weight_min} weight_max={el.weight_max}/>
+                    </Link>
+                        )})}
             </div>
-        )})}
         </div>
         
     </div>
  )
 }
+
+{/* <header>
+        <div className={style.arreglar}>
+            
+                <button className={style.logo}>Dogpedia</button>
+           
+        </div> */}
+        {/* <div className="homeContainer"> */}
+            {/* <div>
+                <button className = {style.btn} onClick={e=>{handleClick(e)}}>Reload Dogs!</button>
+                <Link to='/create'>
+                        <button className = {style.btn} >Create Dog</button>
+                 </Link>
+            </div> */}
+            
+    {/* <div className={style.headerLeft}> */}
+
+
+
+    // abajo del div de serach bar
+    // {/* </div> */}
+    // </div>
+    // {/* </div> */}
+    //    {/* </header> */}
