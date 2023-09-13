@@ -2,11 +2,12 @@ const {Router} = require("express")
 const {Dog, Temperament} = require("../db")
 const axios = require('axios');
 const router = Router();
+const {API_KEY} = process.env;
 
 
 router.get('/', async (req,res) => {
     try {
-           const api = await axios.get('https://api.thedogapi.com/v1/breeds?api_key=live_aSbCh5Jtfk5aDR8Nks3VmxGVneQW2vKac3UpHNzBGfKch3b57K9108CuJ7cAxUvJ')
+           const api = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`)
            const perros = await api.data.map (el => el.temperament)
            let perrosSplit = await perros.join().split(',')
            let perrosTrim = await perrosSplit.map(e => e.trim())
